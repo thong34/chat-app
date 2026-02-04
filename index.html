@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chat App</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/chat-app-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/chat-app-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/chat-app-android.chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="icons/chat-app-android.chrome-512x512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/chat-app-apple-touch-icon.png">
+  <link rel="shortcut icon" href="icons/chat-app.ico">
+  <link rel="manifest" href="chat-app-site.webmanifest">
+</head>
+<body>
+  <div id="app">
+    <!-- LOGIN -->
+    <div id="loginPage" class="card">
+      <h2>Welcome — Sign in</h2>
+      <input id="usernameInput" placeholder="Username" />
+      <input id="phoneInput" placeholder="Phone number" />
+      <button id="loginBtn">Sign in / Register</button>
+    </div>
+
+    <!-- CHAT -->
+    <div id="chatPage" style="display:none;">
+      <header class="chat-header">
+        <div>
+          <strong id="meLabel"></strong><br>
+          <small id="mePhone"></small>
+        </div>
+        <div class="header-actions">
+          <button id="logoutBtn">Logout</button>
+        </div>
+      </header>
+
+      <div class="main">
+        <aside class="users-panel">
+          <h3>Users</h3>
+          <ul id="usersList" class="users-list"></ul>
+        </aside>
+
+        <section class="chat-panel">
+          <div id="messages" class="messages"></div>
+
+          <div class="composer">
+            <input id="msgInput" placeholder="Type a message..." />
+            <button id="sendBtn">Send</button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
