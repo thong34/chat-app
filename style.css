@@ -7,6 +7,16 @@
   --muted:#666;
 }
 
+.cny-banner {
+  background: #d62828;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
 *{box-sizing:border-box;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
 body{margin:0;background:var(--bg);color:#222}
 .card{background:var(--card);padding:18px;border-radius:10px;max-width:420px;margin:40px auto;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
@@ -32,3 +42,18 @@ body{margin:0;background:var(--bg);color:#222}
 .msg strong{display:block;font-size:12px;color:var(--muted);margin-bottom:6px}
 .msg.you{background:var(--me-bubble);margin-left:auto;text-align:right}
 .msg.friend{background:var(--friend-bubble);margin-right:auto;text-align:left}
+
+/* Chinese New Year – Year of the Horse */
+body.cny-horse {
+  --accent: #d62828;        /* festive red */
+  --bg: #fff7e6;            /* warm background */
+}
+
+body.cny-horse .chat-header {
+  background: linear-gradient(90deg, #d62828, #f77f00);
+  color: #fff;
+}
+
+body.cny-horse .users-panel h3::after {
+  content: " 🐎";
+}
