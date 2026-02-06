@@ -331,11 +331,9 @@ window.addEventListener('beforeunload', async (event) => {
     });
   }
 });
-});
-
+const ENABLE_CNY = true;
 if (ENABLE_CNY) {
 document.body.classList.add("cny-horse");
-const ENABLE_CNY = true;
 
 document.body.classList.add("cny-horse");
 
@@ -367,3 +365,4 @@ function dailyLuckForUser(username) {
   return luckMessages[Math.abs(hash) % luckMessages.length];
 }
 }
+});
