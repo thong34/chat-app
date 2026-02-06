@@ -1,3 +1,7 @@
+if (ENABLE_CNY) {
+document.body.classList.add("cny-horse");
+const ENABLE_CNY = true;
+
 document.body.classList.add("cny-horse");
 
 const luckMessages = [
@@ -26,4 +30,5 @@ function dailyLuckForUser(username) {
     hash = seed.charCodeAt(i) + ((hash << 5) - hash);
   }
   return luckMessages[Math.abs(hash) % luckMessages.length];
+}
 }
