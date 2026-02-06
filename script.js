@@ -18,3 +18,12 @@ if (banner) {
     Your luck today: ${getRandomLuck()}
   </div>`;
 }
+
+function dailyLuckForUser(username) {
+  const seed = new Date().toDateString() + username;
+  let hash = 0;
+  for (let i = 0; i < seed.length; i++) {
+    hash = seed.charCodeAt(i) + ((hash << 5) - hash);
+  }
+  return luckMessages[Math.abs(hash) % luckMessages.length];
+}
